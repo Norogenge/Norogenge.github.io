@@ -1395,6 +1395,7 @@ code span.wa { color: #bf0303; }
 
 
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -1574,7 +1575,7 @@ border-radius: 0px;
 <h2>1.1 Echoviewからの出力データ</h2>
 <ul>
 <li><code>make_NASC_sA_sa()</code>の中で読み込まれるcsvデータ</li>
-<li>**csvデータのファイル名は「‘Year’-‘Line’_‘MT’.csv」としてください**</li>
+<li>**csvデータのファイル名は’Year’-‘Line’_‘MT’.csvとしてください**</li>
 <li>このcsvデータの出力方法、データの形については、こちらを参照ください</li>
 </ul>
 </div>
@@ -1602,10 +1603,9 @@ border-radius: 0px;
 </li>
 <li>0歳だけや1歳以上等の元の尾叉長組成とは違う組成を使用する場合は、この時点で尾叉長組成の調整を行います<br />
 </li>
-<li>下の例で言うと、MT06は<code>MT06_age0</code>と<code>MT06_all</code>の2種類がありますが、後者は0歳(尾叉長11cm未満)だけの尾叉長組成、前者は全年齢を含んだ尾叉長組成となっています</li>
 <li>MTリストと違い、尾叉長組成は解析年ごとに作成を行います</li>
 <li>当該csvは<code>settings()</code>の引数<code>work_dir</code>に設定したフォルダの中に保存してください</li>
-<li>**csvデータのファイル名は「‘Year’_ATWP-FLcomp.csv」としてください**</li>
+<li>**csvデータのファイル名は’Year’_ATWP-FLcomp.csvとしてください**</li>
 <li>デモデータの場合、<code>settings()</code>で<code>work_dir = &quot;https://raw.githubusercontent.com/Norogenge/ATWP/main/data-raw&quot;</code>とするため、尾叉長組成のcsvデータは<code>/data-raw/2023_ATWP-FLcomp.csv</code>として保存しています</li>
 </ul>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># 尾叉長組成の確認</span></span>
@@ -1617,7 +1617,7 @@ border-radius: 0px;
 <ul>
 <li><code>fish_Info()</code>の中で読み込まれるcsvデータ</li>
 <li>ALKの作成方法は、1.Excelと<code>make_ALK()</code>による作成と2.<code>make_ALK()</code>単体での作成の2パターンがあります</li>
-<li>**いずれの作成方法でも、csvデータのファイル名は「‘Year_ATWP-ALK-’max_age’p-sokuho.csv」または「’Year’_ATWP-ALK-’max_age’p-kakutei.csv」としてください**</li>
+<li>**いずれの作成方法でも、csvデータのファイル名は’Year_ATWP-ALK-‘max_age’p-sokuho.csvまたは’Year’_ATWP-ALK-’max_age’p-kakutei.csvとしてください**</li>
 <li>ファイル名の違いについては、「3.2
 <code>fish_Info()</code>の動かし方」を参照ください</li>
 </ul>
@@ -1627,7 +1627,7 @@ border-radius: 0px;
 <li><code>make_ALK()</code>の中で読み込まれるcsvデータ</li>
 <li>列名<code>FINAL</code>または<code>FINAL_AGE</code>に最終的な年齢査定結果、列名<code>CLASS</code>に尾叉長階級が記録された状態(列名は大文字、小文字どちらでも可)</li>
 <li>当該csvは<code>make_ALK()</code>の引数<code>ALK_work_dir</code>に設定したフォルダの中に保存してください</li>
-<li>**csvデータのファイル名は「‘Year’_ATWP-suke.csv」としてください**</li>
+<li>**csvデータのファイル名は’Year’_ATWP-suke.csvとしてください**</li>
 <li>デモデータの場合、<code>make_ALK()</code>で<code>ALK_work_dir = &quot;https://raw.githubusercontent.com/Norogenge/ATWP/main/data-raw&quot;</code>とするため、年齢査定結果のcsvデータは<code>/data-raw/2023_ATWP-suke.csv</code>として保存しています</li>
 <li><code>make_ALK()</code>の詳細については、「1.4.4
 <code>make_ALK()</code>の動かし方」を参照ください</li>
@@ -1659,7 +1659,7 @@ border-radius: 0px;
 <h3>1.4.4 <code>make_ALK()</code>の動かし方</h3>
 <ul>
 <li>調査中に精密測定を行った個体の年齢査定から、ALK作成に必要な「尾叉長階級ごとの年齢別個体数」を算出する関数</li>
-<li>算出した年齢別個体数は、<code>ALK_work_dir</code>のフォルダ内に「‘ALK_Year’_ATWP-ALK-個体数算出-’ALK_max_age’p.csv」のファイル名で保存されます</li>
+<li>算出した年齢別個体数は、<code>ALK_work_dir</code>のフォルダ内に’ALK_Year’_ATWP-ALK-個体数算出-’ALK_max_age’p.csvのファイル名で保存されます</li>
 <li>0歳魚は精密測定を行っていないため、尾叉長階級ごとの年齢別個体数は1歳以上について算出されます</li>
 <li><code>save_ALK = TRUE</code>とすると、関数内で0歳を含むALKを作成することができます</li>
 </ul>
@@ -1700,7 +1700,7 @@ png)を保存するフォルダのパス</li>
 <ul>
 <li><code>make_ALK()</code>の中で0歳を含むALKを作成するか(<code>TRUE</code>)、しないか(<code>FALSE</code>,
 デフォルト)</li>
-<li><code>make_ALK()</code>で作成したALKは<code>ALK_out_dir</code>のフォルダ内に「‘ALK_year’_ATWP-ALK-’ALK_max_age’p-from-make_ALK().csv」のファイル名で保存されます<br />
+<li><code>make_ALK()</code>で作成したALKは<code>ALK_out_dir</code>のフォルダ内に’ALK_year’_ATWP-ALK-’ALK_max_age’p-from-make_ALK().csvのファイル名で保存されます<br />
 </li>
 <li><code>make_ALK()</code>で作成したALKは、ファイル名の末尾(「from-meke_ALK()」の部分)を”sokuho”または”kakutei”に変更することで、<code>fish_Info()</code>にそのまま使用することができます</li>
 <li>その際、<code>fish_Info()</code>の引数<code>ALK_from_ATWPfun</code>は<code>TRUE</code>にしてください<br />
@@ -1785,17 +1785,15 @@ png)を保存するフォルダのパス</li>
 <li>本パッケージによる作業の起点となるディレクトリのパス<br />
 </li>
 <li>現状ではATWP調査の解析に特化しているため、<code>work_dir</code>の1つ下の階層に海域ごとのフォルダがあり(e.g.,
-“#####/ATWP/2023/Donan”)、各海域のフォルダ内にEchoviewから出力したcsvデータが保存されている場合に、データを読み込むことができる仕様となっています(海域フォルダの名称は①全て大文字、②全て小文字、③先頭だけ大文字の3パターンのいずれか)</li>
-<li>つまり、デモを例にすると”<a href="https://github.com/Norogenge/ATWP/main/data-raw/Donan" class="uri">https://github.com/Norogenge/ATWP/main/data-raw/Donan</a>”
-(or Hidaka or Doto or
-option)のフォルダ内にEchoviewから出力した「‘Year’<em>‘Line’</em>’MT’.csv」が保存されています</li>
+<code>#####/ATWP/2023/Donan</code>)、各海域のフォルダ内にEchoviewから出力したcsvデータが保存されている場合に、データを読み込むことができる仕様となっています(海域フォルダの名称は①全て大文字、②全て小文字、③先頭だけ大文字の3パターンのいずれか)</li>
+<li>つまり、デモを例にすると<code>https://github.com/Norogenge/ATWP/main/data-raw/Donan (or Hidaka or Doto or option)</code>のフォルダ内にEchoviewから出力した’Year’<em>‘Line’</em>’MT’.csvが保存されています</li>
 </ul></li>
 <li><code>out_dir</code>
 <ul>
 <li>本パッケージによって作成・出力されたデータ(csv,
 png)を保存するフォルダのパス</li>
 <li>関数を動かす前に各自でフォルダの作成をしてください</li>
-<li>デモでは、Dドライブに”ATWP_demo”というフォルダを作成し、そこに解析結果を保存するようにしています</li>
+<li>デモでは、Dドライブに<code>D:/ATWP_demo</code>というフォルダを作成し、そこに解析結果を保存するようにしています</li>
 <li>「速報版」(調査年の9月資源評価で使用する解析結果)か「確定版」(調査年の次年度の資源評価で確定版として使用する解析結果)がわかるようにしたり、お好きなように設定しください</li>
 </ul></li>
 </ul>
@@ -1808,9 +1806,9 @@ png)を保存するフォルダのパス</li>
 <li>また、<code>settings()</code>、<code>fish_Info()</code>で作成した、これ以降の解析に必要な情報が入っているリスト<code>Settings_&#39;Year&#39;</code>を、<code>work_dir</code>の1つ上の階層に<code>Settings</code>という名前のフォルダを作成して、<code>RData</code>形式で保存します<br />
 </li>
 <li>ただし、デモで動かすときは<code>settings()</code>の<code>out_dir</code>の中に<code>Settings</code>という名前のフォルダを作成して、<code>RData</code>形式で保存するようになっています</li>
-<li>デフォルトでは、<code>RData</code>のファイル名は、「Settings_‘Year’.RData」ですが、引数<code>List_name</code>を設定することでファイル名の末尾に日付やメモを付け加えることができます<br />
+<li>デフォルトでは、<code>RData</code>のファイル名は、Settings_‘Year’.RDataですが、引数<code>List_name</code>を設定することでファイル名の末尾に日付やメモを付け加えることができます<br />
 </li>
-<li>例えば、<code>List_name = &quot;test&quot;</code>にすると、「Settings_‘Year’-test.RData」というファイル名で保存されます</li>
+<li>例えば、<code>List_name = &quot;test&quot;</code>にすると、Settings_‘Year’-test.RDataというファイル名で保存されます</li>
 </ul>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>ALK<span class="ot">&lt;-</span> <span class="st">&quot;sokuho&quot;</span> <span class="co"># 速報版として夏の資源評価に使用した解析結果を再現するから</span></span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a></span>
@@ -1826,8 +1824,8 @@ png)を保存するフォルダのパス</li>
 <ul>
 <li>速報版のALKを使用するのか、確定版のALKを使用するのか<br />
 </li>
-<li>**速報版のALKを使用するとき(<code>ALK = &quot;sokuho&quot;</code>)は、ファイル名を「“Year”_ATWP-ALK-“max_age”p-sokuho.csv」にしてください**</li>
-<li>**確定版のALKを使用するとき(<code>ALK = &quot;kakutei&quot;</code>)は、ファイル名を「‘Year’_ATWP-ALK-’max_age’p-kakutei.csv」にしてください**<br />
+<li>**速報版のALKを使用するとき(<code>ALK = &quot;sokuho&quot;</code>)は、ファイル名を”Year”_ATWP-ALK-“max_age”p-sokuho.csvにしてください**</li>
+<li>**確定版のALKを使用するとき(<code>ALK = &quot;kakutei&quot;</code>)は、ファイル名を’Year’_ATWP-ALK-’max_age’p-kakutei.csvにしてください**<br />
 </li>
 </ul></li>
 <li><code>ALK_from_ATWPfun</code>
@@ -1848,13 +1846,13 @@ png)を保存するフォルダのパス</li>
 <h2>4.1 <code>make_NASC_sA_sa()</code>の動かし方</h2>
 <ul>
 <li>1.1のデータを読み込み、そのデータを用いて以下の3つのデータフレームを作成・保存する関数</li>
-<li>ⅰ各定線・各MTごとにEchoviewから出力したcsvデータを使って、Interval(ATWP解析では0.1nm)ごとにNASC値を合計したもの(「‘Year’_‘Line’-‘MT’-NASC.csv」)<br />
+<li>ⅰ各定線・各MTごとにEchoviewから出力したcsvデータを使って、Interval(ATWP解析では0.1nm)ごとにNASC値を合計したもの(‘Year’_‘Line’-‘MT’-NASC.csv)<br />
 </li>
-<li>ⅰを定線ごとに集約したもの(「‘Year’_‘Line’-NASC.csv」)</li>
-<li>ⅱの全定線分を集約したもの(「‘Year’_ATWP-NASC-sA.csv」と「‘Year’_ATWP-NASC-sa-change.csv」)</li>
-<li>ここで作成される<code>NASC_sA_&#39;Year&#39;</code>と<code>NASC_sa_&#39;Year&#39;</code>はデータ容量が大きく、<code>Settings_&#39;Year&#39;</code>には収納していないので、これらのデータを使いたい時はそれぞれ「‘Year’_ATWP-NASC-sA.csv」と「‘Year’_ATWP-NASC-sa-change.csv」をread.csvしてください<br />
+<li>ⅰを定線ごとに集約したもの(‘Year’_‘Line’-NASC.csv)</li>
+<li>ⅱの全定線分を集約したもの(‘Year’_ATWP-NASC-sA.csvと’Year’_ATWP-NASC-sa-change.csv)</li>
+<li>ここで作成される<code>NASC_sA_&#39;Year&#39;</code>と<code>NASC_sa_&#39;Year&#39;</code>はデータ容量が大きく、<code>Settings_&#39;Year&#39;</code>には収納していないので、これらのデータを使いたい時はそれぞれ’Year’_ATWP-NASC-sA.csvと’Year’_ATWP-NASC-sa-change.csvをread.csvしてください<br />
 </li>
-<li>同時に、各定線の解析範囲の長さ(Intervalの個数を数える)を計算して、「‘Year’_ATWP-Analysis-Length.csv」のファイル名で保存されるので、過去の解析範囲の長さと大幅な違いがないかを確認することができます<br />
+<li>同時に、各定線の解析範囲の長さ(Intervalの個数を数える)を計算して、‘Year’_ATWP-Analysis-Length.csvのファイル名で保存されるので、過去の解析範囲の長さと大幅な違いがないかを確認することができます<br />
 </li>
 <li>引数の<code>Layer</code>を<code>5m</code>とすると、5m層ごとの資源尾数が計算できるようになります</li>
 </ul>
@@ -1949,18 +1947,18 @@ png)を保存するフォルダのパス</li>
 </div>
 <div id="年齢別資源尾数の計算" class="section level1">
 <h1>6. 年齢別資源尾数の計算</h1>
-<p>最後に、<code>calc_Biomass_by_age()</code>で年齢別の資源尾数を計算します
+<p>最後に、<code>calc_Biomass_by_age()</code>で年齢別の資源尾数を計算します<br />
 <strong>資源評価で使用する1歳の現存資源尾数を求めることを目的とするのならば、ここまでで十分です</strong></p>
 <div id="calc_biomass_by_ageの動かし方" class="section level2">
 <h2>6.1 <code>calc_Biomass_by_age()</code>の動かし方</h2>
 <ul>
-<li><code>make_NASC_sA_sa()</code>で作成した「‘Year’<em>ATWP-NASC-sa-change.csv」、<code>make_TS_by_MT()</code>で作成した「‘Year’</em>’MT’-TS.csv」を用いて年齢別現存資源尾数を計算する関数<br />
+<li><code>make_NASC_sA_sa()</code>で作成したYear’<em>ATWP-NASC-sa-change.csv、<code>make_TS_by_MT()</code>で作成した’Year’</em>’MT’-TS.csvを用いて年齢別現存資源尾数を計算する関数<br />
 </li>
-<li>計算結果は<code>out_dir</code>の中に「‘Year’_ATWP-res-all-‘max_age’p.csv」と「’Year’_ATWP-res-summary-’max_age’p.csv」のファイル名で保存されます<br />
+<li>計算結果は<code>out_dir</code>の中に’Year’_ATWP-res-all-‘max_age’p.csvと’Year’_ATWP-res-summary-’max_age’p.csvのファイル名で保存されます<br />
 </li>
 <li><strong>ここで計算された1歳現存資源尾数をスケトウダラ太平洋系群におけるVPAの直近3年間の加入量指標値として用いています</strong><br />
 </li>
-<li>また、<code>plot_shift()</code>で資源尾数(、資源量、親魚量)のプロットに必要なcsvデータが、<code>out_dir</code>の中に「‘Year’_Biomass-summary.csv」のファイル名で保存されます(詳細は、<a href="https://github.com/Norogenge/ATWP/blob/main/vignettes/how-to-use_2.Rmd">その他の使い方</a>を参照ください)</li>
+<li>また、<code>plot_shift()</code>で資源尾数(、資源量、親魚量)のプロットに必要なcsvデータが、<code>out_dir</code>の中に’Year’_Biomass-summary.csvのファイル名で保存されます(詳細は、<a href="https://norogenge.github.io/ATWP/doc/how-to-use_2.html">その他の使い方</a>を参照ください)</li>
 </ul>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>Year<span class="ot">&lt;-</span> <span class="dv">2023</span></span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
@@ -2005,7 +2003,7 @@ png)を保存するフォルダのパス</li>
 <li>デフォルトでは、<code>waa = NULL</code>,
 <code>maa = NULL</code>となっているため、年齢別現存資源尾数しか計算されません<br />
 </li>
-<li>詳細は、<a href="https://github.com/Norogenge/ATWP/blob/main/vignettes/how-to-use_2.Rmd">その他の使い方</a>を参照ください</li>
+<li>詳細は、<a href="https://norogenge.github.io/ATWP/doc/how-to-use_2.html">その他の使い方</a>を参照ください</li>
 </ul></li>
 </ul>
 </div>

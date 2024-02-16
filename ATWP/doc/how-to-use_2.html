@@ -1395,6 +1395,7 @@ code span.wa { color: #bf0303; }
 
 
 
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 
 
@@ -1563,9 +1564,9 @@ border-radius: 0px;
 <code>calc_Biomass_by_age()</code>で資源尾数だけでなく、資源量と親魚量も計算する</h1>
 <ul>
 <li><code>calc_Biomass_by_age()</code>の引数<code>waa</code>と<code>maa</code>に年齢別体重と年齢別成熟率を設定することで年齢別資源尾数だけでなく資源量(トン)と親魚量(トン)を計算することもできます</li>
-<li>計算された資源尾数、資源量、親魚量は<code>out_dir</code>の中に「‘Year’_Biomass-summary.csv」のファイル名で保存されます<br />
+<li>計算された資源尾数、資源量、親魚量は<code>out_dir</code>の中に’Year’_Biomass-summary.csvのファイル名で保存されます<br />
 </li>
-<li>また、「‘Year’_Biomass-summary.csv」を使用して、<code>plot_shift()</code>で資源尾数(、資源量、親魚量)の経年変化をプロットすることができます(詳細は「4.
+<li>また、‘Year’_Biomass-summary.csvを使用して、<code>plot_shift()</code>で資源尾数(、資源量、親魚量)の経年変化をプロットすることができます(詳細は「4.
 <code>plot_shift()</code>の動かし方」)</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="co"># waaの確認</span></span>
@@ -1596,11 +1597,11 @@ border-radius: 0px;
 </li>
 <li>海図にプロットすることで、ずば抜けてNASC値が高いところ(海底を含んでいる、浮魚の反応を含んでいる等)を確認することにも使えそうな気がします<br />
 </li>
-<li>プロットには<code>make_NASC_sA_sa()</code>で作成した「‘Year’_ATWP-NASC-sA.csv」を使用します<br />
+<li>プロットには<code>make_NASC_sA_sa()</code>で作成した’Year’_ATWP-NASC-sA.csvを使用します<br />
 </li>
 <li>上記のデータと<code>fish_Info()</code>で保存したリスト<code>Settings_&#39;Year&#39;</code>が保存されていれば、<code>plot_NASC()</code>を実行するだけでプロットすることができます<br />
 </li>
-<li>出力したプロットは<code>out_dir</code>の中に「‘Year’_NASC-on-map.png」のファイル名で保存されます<br />
+<li>出力したプロットは<code>out_dir</code>の中に’Year’_NASC-on-map.pngのファイル名で保存されます<br />
 </li>
 <li>関数実行時、海図作成に必要なデータをWebからダウンロードして、<code>getwd()</code>に保存されます</li>
 <li><strong>2001~2008年は東北太平洋でも調査をやっていたが、プロットに含めるのかどうかを検討</strong></li>
@@ -1684,11 +1685,11 @@ border-radius: 0px;
 あたりの平均分布密度 <span class="math inline">\((ind./m^2)\)</span>
 を海図にプロットする関数<br />
 </li>
-<li>プロットには<code>calc_Biomass_by_age()</code>で作成した「‘Year’_ATWP-res-all-’max_age’p.csv」を使用します<br />
+<li>プロットには<code>calc_Biomass_by_age()</code>で作成した’Year’_ATWP-res-all-’max_age’p.csvを使用します<br />
 </li>
 <li>上記のデータと<code>fish_Info()</code>で保存したリスト<code>Settings_&#39;Year&#39;</code>が保存されていれば、<code>plot_by_age()</code>を実行するだけでプロットすることができます<br />
 </li>
-<li>出力したプロットは<code>out_dir</code>の中に「‘Year’_Density-of-‘age’-on-map.png」のファイル名で保存されます</li>
+<li>出力したプロットは<code>out_dir</code>の中に’Year’_Density-of-‘age’-on-map.pngのファイル名で保存されます</li>
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>Year<span class="ot">&lt;-</span> <span class="dv">2023</span></span>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
@@ -1753,7 +1754,7 @@ Gravity)を赤十字でプロットするか否か<br />
 <ul>
 <li>資源尾数、資源量、親魚量、NASC、年齢別平均分布密度の経年変化をプロットする関数<br />
 </li>
-<li>プロットには<code>calc_Biomass_by_age()</code>で作成した「‘Year’_Biomass-summary.csv」、<code>plot_NASC()</code>で作成した「‘Year’_NASC-on-map.csv」と「‘Year’_COG_NASC.csv」、<code>plot_by_age()</code>で作成した「‘Year’_Density-by-age-on-map.csv」と「‘Year’_COG-by-age.csv」を使用します<br />
+<li>プロットには<code>calc_Biomass_by_age()</code>で作成した’Year’_Biomass-summary.csv、<code>plot_NASC()</code>で作成した’Year’_NASC-on-map.csvと’Year’_COG_NASC.csv、<code>plot_by_age()</code>で作成した’Year’_Density-by-age-on-map.csvと’Year’_COG-by-age.csvを使用します<br />
 </li>
 <li>上記のデータと<code>fish_Info()</code>で保存したリスト<code>Settings_&#39;Year&#39;</code>が保存されていれば、<code>plot_shift()</code>を実行するだけでプロットすることができます<br />
 </li>
@@ -1856,13 +1857,13 @@ Gravity)を赤十字でプロットするか否か<br />
 <li>上記3つの関数内で海図を作成するときは、<code>plot_NASC()</code>,
 <code>plot_by_age()</code>,
 <code>plot_shift()</code>の<code>Year</code>, <code>Region</code>,
-<code>resolution</code>を設定すれば大丈夫<br />
+<code>resolution</code>を設定すれば大丈夫です<br />
 </li>
-<li>この関数単体で実行して、ATWP調査海域以外の海図を作成することも可能<br />
+<li>この関数単体で実行して、ATWP調査海域以外の海図を作成することも可能です<br />
 </li>
-<li>その場合、下記の引数を設定する必要あり<br />
+<li>その場合、下記の引数を設定する必要があります<br />
 </li>
-<li><code>plot = &quot;plot_3&quot;</code>として、<code>Lat</code>と<code>Lon</code>を設定した場合、好きな範囲の海図を作成することが可能</li>
+<li><code>plot = &quot;plot_3&quot;</code>として、<code>Lat</code>と<code>Lon</code>を設定した場合、好きな範囲の海図を作成することが可能です</li>
 </ul>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>plot<span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;plot_1&quot;</span>,<span class="st">&quot;plot_2&quot;</span>,<span class="st">&quot;plot_3&quot;</span>)[<span class="dv">1</span>]</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
@@ -1943,7 +1944,7 @@ Gravity)を赤十字でプロットするか否か<br />
 </li>
 <li>例えば、生データはあるが、CTDのキャップを取り忘れたまま観測したため、異常な数値となっている時など<br />
 </li>
-<li>とりあえず、<code>FALSE</code>でプロットを行い、異常な箇所がないかを確認してみる<br />
+<li>とりあえず、<code>FALSE</code>でプロットを行い、異常な箇所がないかを確認してみてください<br />
 </li>
 <li>2023年調査では、Q2で行ったCTD観測のデータがおかしくなってる</li>
 </ul></li>
