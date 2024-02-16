@@ -20,10 +20,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+<img src="https://github.com/Norogenge/Norogenge.github.io/blob/main/ATWP/logo/ATWP_logo.png" align="right" width="175" height="200"/>
 
 # パッケージについて
-<img src="https://github.com/Norogenge/Norogenge.github.io/blob/main/ATWP/ATWP_logo.png" align="right" width="200" height="230" class="logo"/>
-
 - 水産資源研究所釧路庁舎(旧、北水研)の底魚資源部が例年6-7月に北海道太平洋を対象に行っているスケトウダラ音響トロール調査(たぶん、Acoustic Trawl survey of Walleye Pollock, ATWP)の解析用パッケージ  
 - この調査では、計量魚群探知機を用いた定線航走とトロール曳網(離着底 or 中層)を行うことで、調査海域におけるスケトウダラの年齢別現存資源尾数を推定しています  
 - 本解析で推定した1歳の現存資源尾数はスケトウダラ太平洋系群のVPAにおける直近3年間の年級群の加入量指標値として使用しています([令和4年度スケトウダラ太平洋系群の資源評価報告書](https://abchan.fra.go.jp/wpt/wp-content/uploads/2023/07/details_2022_12.pdf))  
@@ -32,7 +31,8 @@ knitr::opts_chunk$set(
 
 
 # インストール方法
-パッケージを利用したい方は、佐藤(sato_ryuta90@fra.go.jp)までご連絡ください。
+パッケージを利用したい方は、佐藤(sato_ryuta90@fra.go.jp)までご連絡ください。  
+[GitHub](https://github.com/Norogenge/ATWP)のリンク
 
 # パッケージの使い方
 - [ATWPパッケージのhome page](https://norogenge.github.io/ATWP/home.html)
