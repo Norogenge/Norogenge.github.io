@@ -1,0 +1,41 @@
+---
+title: "ATWP"
+auther: "佐藤隆太"
+date: "2024/2/16"
+output: 
+  html_document:
+   highlight: kate
+   toc: yes
+   toc_float: yes
+vignette: >
+  %\VignetteIndexEntry{Home page}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+# パッケージについて
+<img src="https://github.com/Norogenge/Norogenge.github.io/blob/main/ATWP/ATWP_logo.png" align="right" width="200" height="230" class="logo"/>
+
+- 水産資源研究所釧路庁舎(旧、北水研)の底魚資源部が例年6-7月に北海道太平洋を対象に行っているスケトウダラ音響トロール調査(たぶん、Acoustic Trawl survey of Walleye Pollock, ATWP)の解析用パッケージ  
+- この調査では、計量魚群探知機を用いた定線航走とトロール曳網(離着底 or 中層)を行うことで、調査海域におけるスケトウダラの年齢別現存資源尾数を推定しています  
+- 本解析で推定した1歳の現存資源尾数はスケトウダラ太平洋系群のVPAにおける直近3年間の年級群の加入量指標値として使用しています([令和4年度スケトウダラ太平洋系群の資源評価報告書](https://abchan.fra.go.jp/wpt/wp-content/uploads/2023/07/details_2022_12.pdf))  
+- 現在は、ATWP調査の解析にのみ特化したパッケージとなっていますが、将来的には魚探を使った調査・研究を行っている他の研究機関(他水研、道総研等)にも使ってもらえるようなパッケージ開発を目指していきたいです(需要があれば)  
+- ATWP調査について、音響について、解析データの資源評価での使われ方、等については[参考文献](https://norogenge.github.io/ATWP/doc/term-and-procedure.html)を参照にしてください  
+
+
+# インストール方法
+パッケージを利用したい方は、佐藤(sato_ryuta90@fra.go.jp)までご連絡ください。
+
+# パッケージの使い方
+- [ATWPパッケージのhome page](https://norogenge.github.io/ATWP/home.html)
+  - [データの準備～年齢別資源尾数の計算](https://norogenge.github.io/ATWP/doc/how-to-use_1.html)
+  - [その他の使い方](https://norogenge.github.io/ATWP/doc/how-to-use_2.html)
+  - [用語の説明、計算手順、参考文献](https://norogenge.github.io/ATWP/doc/term-and-procedure.html)
